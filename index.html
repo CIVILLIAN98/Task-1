@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>TASK #1</h1>
+    
+<p>Click the button to begin.</p>
+
+<button onclick="myFunction()">Begin</button>
+
+<p id="demo">Who's there?</p>
+
+<script>
+function myFunction() {
+  let person = prompt("Please enter your name");
+  if (person == null) {
+    document.getElementById("demo").innerHTML =
+    "Canceled";
+  }else if(person !="admin"){
+    document.getElementById("demo").innerHTML =
+    "I don't know you";
+  }else if(person =="admin"){
+    document.getElementById("demo").innerHTML =
+    "Welcome!"; 
+    let password = prompt("Enter the password")
+    
+    if(password == null){document.getElementById("demo").innerHTML =
+    "Canceled!";}else if(password== "themaster"){
+        document.getElementById("demo").innerHTML =
+    "WELCOME!";
+    }else{
+        document.getElementById("demo").innerHTML =
+    "wrong password!";
+    }
+  }
+}
+</script>
+
+</body>
+
+</html>
